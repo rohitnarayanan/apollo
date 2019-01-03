@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration debug="true">
+	<include
+		resource="accelerate/commons/logging/logback-config.xml" />
+
+	<root level="info">
+		<appender-ref ref="SysOutAppender" />
+	</root>
+</configuration>

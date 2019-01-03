@@ -1,0 +1,44 @@
+# Spring Config
+spring:
+  profiles:
+    active: accelerate.spring.logging, accelerate.spring.web
+  
+  application:
+    name: Apollo
+    
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+# Server Config
+server:
+  port: 8080
+  servlet:
+    application-display-name: Apollo
+    context-path: /apollo
+    path: /
+
+# Spring Security Config
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: when-authorized
+
+
+# accelerate config
+accelerate:
+  spring:
+    defaults: enabled
+    logging:
+      debug: enabled #Enable debug logs
+      audit: enabled #Enable audit logs for entry and exit of annotated methods
+      metrics: enabled #Enable metric logs for execution time of annotated methods
+    web:
+      defaults: enabled
+
+# apollo config
